@@ -1,32 +1,29 @@
+import java.util.*;
+
 public class FourthPracticeCode {
-        static byte b;
-        static short s;
-        static int i;
-        static long l;
-        static float f;
-        static double d;
-        static char c;
-        static boolean bl;
-        public void PrimitiveDatatype()
-        {
-            int i=10;
-            System.out.println("Byte :"+b);
-            System.out.println("Short :"+s);
-            System.out.println("Int :"+i);
-            System.out.println("Long :"+l);
-            System.out.println("Float :"+f);
-            System.out.println("Double :"+d);
-            System.out.println("Char :"+c);
-            System.out.println("Boolean :"+bl);
+    public static void main(String[] args)
+    {
+        int i, sum=0, num,c=0;
 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\n Enter Number of Numbers to be Calculated: ");
+        int n = sc.nextInt();
+        for(i=0;i<n;i++) {
+
+            System.out.print("Enter the number: ");
+            try
+            {
+
+                num = sc.nextInt(); //reads integer from the user
+                sum = sum + num;
+            }
+            catch (Exception e)
+            {
+                c++;
+            }
         }
-        public static void main(String[] args)
-        {
-            System.out.println("The default values of primitive data types are:");
-            FourthPracticeCode dsvm=new FourthPracticeCode();
-            dsvm.PrimitiveDatatype();
+        System.out.println("The sum of the numbers is: "+sum);
+        System.out.println("The Count of non-integer value is: "+c);
 
-        }
-
-
+    }
 }
